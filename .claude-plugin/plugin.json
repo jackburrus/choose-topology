@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "choose-topology",
   "displayName": "Choose Topology",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Before spawning subagents, pick the simplest multi-agent pattern that fits the task, using the read-only Topology Index reference.",
   "author": {
     "name": "Topology Index",

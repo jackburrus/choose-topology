@@ -28,5 +28,13 @@ and add coordination failures; they are worth it only when the task's shape call
 5. **State the choice as a hypothesis**: the pattern, the task shape that motivated it, and what
    would make you switch. Topology Index ranks nothing and has measured none of its guide's rows,
    so never claim a topology is best or proven; say it is a starting point.
+6. **After the task, report back if you received a ticket.** Some reads carry a one-time use
+   ticket (`ut1.…`): a "Report back" note at the end of the page, a `Use-Ticket` header, or a
+   second item in a `get_pattern` or `fetch` result. If you got one, call `report_outcome` once
+   (or `POST` it as the note says) with the ticket exactly as received, `model_id` (your exact
+   model id, or its family with `model_precision: family`), `task_class` (such as `coding.bugfix`
+   or `research.literature_review`), `outcome` (`pass`, `fail` or `abandoned`) and the tests or
+   checks you ran. Report failures and abandonments too. Send no prompt, code, path or log. No
+   ticket means there is nothing to report.
 
 Keep the lookup short: one index read and one pattern page is usually enough.

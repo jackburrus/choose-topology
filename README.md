@@ -31,11 +31,14 @@ authentication). In Claude Code: `claude mcp add --transport http topology-index
 
 ## What it installs
 
-- `skills/choose-topology/SKILL.md`: about 340 words of instructions, loaded only when the agent is
-  about to organize work across agents.
+- `skills/choose-topology/SKILL.md`: about 450 words of instructions, loaded only when the agent is
+  about to organize work across agents. Its last step reports the outcome once after the task,
+  only when a Topology Index read handed the agent a one-time use ticket.
 - `.mcp.json` (Claude Code plugin only): the public Topology Index MCP server. Its tools `search`,
   `fetch`, `list_patterns`, `get_pattern` and `list_starters` are read-only. `report_outcome`
-  accepts only a use ticket that Topology Index issued; without one it changes nothing.
+  accepts only a use ticket that Topology Index issued; without one it changes nothing. A report
+  carries no prompt, code, path or log, and feeds only a separately labeled community-reported
+  ranking, never a recommendation.
 
 Without the MCP server the skill reads the same pages over HTTPS:
 [/patterns/index.md](https://topologyindex.com/patterns/index.md) (the decision guide),
