@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "topology-index",
+  "description": "Choose a multi-agent topology before spawning subagents, from the Topology Index reference.",
+  "owner": {
+    "name": "Topology Index",
+    "url": "https://topologyindex.com"
+  },
+  "plugins": [
+    {
+      "name": "choose-topology",
+      "source": "./",
+      "category": "development",
+      "tags": ["multi-agent", "subagents", "orchestration", "agentic-design-patterns"]
+    }
+  ]
+}
